@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>新京师方舟教育</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="/static/css/font-awesome.min.css">
+
+    <!-- ElegantFonts CSS -->
+    <link rel="stylesheet" href="/static/css/elegant-fonts.css">
+
+    <!-- themify-icons CSS -->
+    <link rel="stylesheet" href="/static/css/themify-icons.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="/static/css/swiper.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/static/css/style.css">
+
+</head>
+<body>
+
+
+
+    <header class="site-header">
+
+        <div class="nav-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 d-flex flex-wrap justify-content-between align-items-center">
+                        <div class="site-branding d-flex align-items-center"  >
+                           <a class="d-block" href="index.html" rel="home"><img class="d-block"  src="/media/{{ logo }}" alt="logo"></a>
+                        </div><!-- .site-branding -->
+
+                        <nav class="site-navigation d-flex justify-content-end align-items-center">
+                            <ul class="d-flex flex-column flex-lg-row justify-content-lg-end align-content-center">
+                                <li class="current-menu-item"><a href="{% url 'index' %}">首页</a></li>
+                                <li><a href="{% url 'about' %}">新京师方舟教育</a></li>
+                                <li><a href="{% url 'causes' %}">业务体系</a></li>
+                                <li><a href="{% url 'portfolio' %}">企业合作共赢</a></li>
+                                <li><a href="{% url 'single-news' %}">最新消息</a></li>
+                                <li><a href="{% url 'single-causes' %}">在线报名</a></li>
+                                <li><a href="{% url 'concat' %}">联系我们</a></li>
+                            </ul>
+                        </nav><!-- .site-navigation -->
+
+                        <div class="hamburger-menu d-lg-none">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div><!-- .hamburger-menu -->
+                    </div><!-- .col -->
+                </div><!-- .row -->
+            </div><!-- .container -->
+        </div><!-- .nav-bar -->
+    </header><!-- .site-header -->
+
+
+    <div class="swiper-container hero-slider">
+        <div class="swiper-wrapper">
+
+            {% for wrap in wrapper %}
+                <div class="swiper-slide hero-content-wrap">
+                    <img src="/media/{{ wrap.entry_image }}" alt="">
+
+                    <div class="hero-content-overlay position-absolute w-100 h-100">
+                        <div class="container h-100">
+                            <div class="row h-100">
+                                <div class="col-12 col-lg-8 d-flex flex-column justify-content-center align-items-start">
+                                    <header class="entry-header">
+                                        <h4>{{ wrap.entry_header_name }}</h4>
+                                        <h2>{{ wrap.entry_header_title }}</h2>
+                                    </header><!-- .entry-header -->
+
+                                    <div class="entry-content mt-4">
+                                        <p>{{ wrap.entry_header_content }}</p>
+                                    </div><!-- .entry-content -->
+
+
+                                </div><!-- .col -->
+                            </div><!-- .row -->
+                        </div><!-- .container -->
+                    </div><!-- .hero-content-overlay -->
+                </div><!-- .hero-content-wrap -->
+            {% endfor %}
+
+        </div><!-- .swiper-wrapper -->
+
+        <div class="pagination-wrap position-absolute w-100">
+            <div class="container">
+                <div class="swiper-pagination"></div>
+            </div><!-- .container -->
+        </div><!-- .pagination-wrap -->
+
+        <!-- Add Arrows -->
+
+        <!-- Add Arrows -->
+        <div class="swiper-button-next swiper-button-white"></div>
+        <div class="swiper-button-prev swiper-button-white"></div>
+        <!--
+        <div class="swiper-button-next flex justify-content-center align-items-center">
+            <span><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1171 960q0 13-10 23l-466 466q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l393-393-393-393q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l466 466q10 10 10 23z"/></svg></span>
+        </div>
+
+        <div class="swiper-button-prev flex justify-content-center align-items-center">
+            <span><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1203 544q0 13-10 23l-393 393 393 393q10 10 10 23t-10 23l-50 50q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l50 50q10 10 10 23z"/></svg></span>
+        </div>
+        -->
+    </div><!-- .hero-slider -->
+
+    <div class="home-page-icon-boxes">
+        <div class="container">
+            <div class="row">
+                {% for box in boxes %}
+                <div class="col-12 col-md-6 col-lg-4 mt-4 mt-lg-0">
+                    <div class="icon-box">
+                        <figure class="d-flex justify-content-center">
+                            <img src="/media/{{ box.image_name_white }}" alt="">
+                            <img src="/media/{{ box.image_name_grey }}" alt="">
+                        </figure>
+
+                        <header class="entry-header">
+                            <h3 class="entry-title">{{ box.entry_title }}</h3>
+                        </header>
+
+                        <div class="entry-content">
+                            <p>{{ box.entry_content }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div><!-- .row -->
+        </div><!-- .container -->
+    </div><!-- .home-page-icon-boxes -->
+
+    <div class="home-page-welcome">
+        <div class="container">
+            {% for wel in welcome %}
+                <div class="row">
+                    <div class="col-12 col-lg-6 order-2 order-lg-1">
+
+                        <div class="welcome-content">
+                            <header class="entry-header">
+                                <h2 class="entry-title">{{ wel.entry_header }}</h2>
+                            </header><!-- .entry-header -->
+
+                            <div class="entry-content mt-5">
+                                <p>{{ wel.entry_content }}</p>
+                            </div><!-- .entry-content -->
+                        </div><!-- .welcome-content -->
+
+                    </div><!-- .col -->
+
+                    <div class="col-12 col-lg-6 mt-4 order-1 order-lg-2">
+                        <img src="/media/{{ wel.image_welcome }}" alt="welcome">
+                    </div><!-- .col -->
+                </div><!-- .row -->
+            {% endfor %}
+        </div><!-- .container -->
+    </div><!-- .home-page-icon-boxes -->
+
+
+
+
+
+
+    <div class="floating_ck">
+        <dl>
+            <dt></dt>
+            <dd class="consult">
+                <span>在线咨询</span>
+                <div class="floating_left floating_ewm zixun">
+                    <i></i>
+
+                    <p class="qrcord_p01">扫一扫<br>在线向我们咨询</p>
+                    <!--<p class="qrcord_p02">全国免费服务热线<br><b>4000-123-123<b></p>-->
+
+                </div>
+            </dd>
+            <dd class="words">
+                <span>在线报名</span>
+                <div class="floating_left"><a href= "{% url 'single-causes' %}">问题在线报名</a></div>
+            </dd>
+            <dd class="qrcord">
+                <span>扫一扫</span>
+
+                <div class="floating_left floating_ewm gongzhonghao">
+                    <i></i>
+
+                    <p class="qrcord_p01">扫一扫<br>加入我们的公众号</p>
+                    <!--<p class="qrcord_p02">全国免费服务热线<br><b>4000-123-123<b></p>-->
+
+                </div>
+
+            </dd>
+            <dd class="return">
+                <span onClick="gotoTop();return false;">返回顶部</span>
+            </dd>
+        </dl>
+    </div>
+    <div id="pop">
+
+        <div id="popHead"> <a id="popClose" title="关闭">关闭</a>
+            <h2>最新消息</h2>
+        </div>
+        <div id="popContent">
+            <dl>
+                <dt id="popTitle"><a target="_blank">{{ breaking_news.news_title }}</a></dt>
+                <dd id="popIntro">{{ breaking_news.news_content }}</dd>
+            </dl>
+            <p id="popMore"><a href="single-causes.html" target="_blank">查看 »</a></p>
+        </div>
+
+    </div>
+
+
+
+    {% include 'bottom.html' %}
+
+
+    <script type="text/javascript" src="/static/js/jquery.min.js"></script>
+    <script type='text/javascript' src='/static/js/198zone.js'></script>
+    <script type='text/javascript' src='/static/js/top.js'></script>
+    <script type='text/javascript' src='/static/js/pop_slider.js'></script>
+
+     <script>
+        breaking_new = {{ breaking_news|safe }};
+        if (breaking_new.length == 2){
+           window.onload=function(){
+                pop=new Pop(breaking_new[0],"{% url 'single-news' %}",breaking_new[1]);
+            };
+
+        }
+
+    </script>
+
+</body>
+</html>

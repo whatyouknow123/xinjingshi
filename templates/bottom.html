@@ -1,0 +1,83 @@
+ <footer class="site-footer">
+        <div class="footer-widgets">
+            <div class="container">
+                <div class="row">
+
+
+                    <div class="col-12 col-md-6 col-lg-4 mt-5 mt-md-0">
+                        <h2>相关链接</h2>
+
+                        <ul>
+                            <li><a href="{% url 'index' %}">公司主页</a></li>
+                            <li><a href="{% url 'about' %}">新京师方舟教育</a></li>
+                            <li><a href="{% url 'causes' %}">业务体系</a></li>
+                            <li><a href="{% url 'portfolio' %}">企业合作共赢</a></li>
+                            <li><a href="{% url 'single-news' %}">最新消息</a></li>
+                            <li><a href="{% url 'single-causes' %}">在线报名</a></li>
+                            <li><a href="{% url 'concat' %}">联系我们</a></li>
+                        </ul>
+                    </div><!-- .col -->
+
+                    <div class="col-12 col-md-6 col-lg-4 mt-5 mt-md-0">
+                        <div class="foot-latest-news">
+                            <h2>最新消息</h2>
+
+                            <ul>
+                                {% for new in bottom_new %}
+                                <li>
+                                    <h3><a href="{% url 'single-news' %}">{{ new.news_title }}</a></h3>
+                                    <div class="posted-date">{{ new.news_time }}</div>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div><!-- .foot-latest-news -->
+                    </div><!-- .col -->
+
+                    <div class="col-12 col-md-6 col-lg-4 mt-5 mt-md-0">
+                        <div class="foot-contact">
+                            <h2>联系方式</h2>
+
+                            {% for base in base_info %}
+
+                            <ul>
+                                <li><i class="fa fa-phone"></i><span>{{ base.phone }}</span></li>
+                                <li><i class="fa fa-envelope"></i><span>{{ base.mail }}</span></li>
+                                <li><i class="fa fa-map-marker"></i><span>{{ base.location }}</span></li>
+                            </ul>
+                            {% endfor %}
+                        </div><!-- .foot-contact -->
+
+                        <div class="subscribe-form">
+                            <!--
+                            <form class="d-flex flex-wrap align-items-center">
+                                <input type="email" placeholder="Your email">
+                                <input type="submit" value="send">
+                            </form>
+                            -->
+                        </div><!-- .search-widget -->
+                    </div><!-- .col -->
+                </div><!-- .row -->
+            </div><!-- .container -->
+        </div><!-- .footer-widgets -->
+
+        <div class="footer-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <p class="m-0"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                    </div><!-- .col-12 -->
+                </div><!-- .row -->
+            </div><!-- .container -->
+        </div><!-- .footer-bar -->
+ </footer><!-- .site-footer -->
+ <script type='text/javascript' src='/static/js/jquery.js'></script>
+ <script type='text/javascript' src='/static/js/jquery.collapsible.min.js'></script>
+ <script type='text/javascript' src='/static/js/swiper.min.js'></script>
+ <script type='text/javascript' src='/static/js/jquery.countdown.min.js'></script>
+ <script type='text/javascript' src='/static/js/circle-progress.min.js'></script>
+ <script type='text/javascript' src='/static/js/jquery.countTo.min.js'></script>
+ <script type='text/javascript' src='/static/js/jquery.barfiller.js'></script>
+ <script type='text/javascript' src='/static/js/custom.js'></script>
+ <script type='text/javascript' src='/static/js/own.js'></script>
