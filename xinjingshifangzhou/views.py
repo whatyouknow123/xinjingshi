@@ -12,11 +12,13 @@ def index(request):
     boxes = get_hero_icon_boxes()
     welcome = get_home_page_welcome()
     breaking_news = get_home_page_breaking_news()
-    breaking_list = []
+    breaking_news_title = ""
+    breaking_news_content = ""
     if len(breaking_news) > 0:
-        breaking_list = [breaking_news[0].news_title, breaking_news[0].news_content]
+        breaking_news_title = breaking_news[0].news_title
+        breaking_news_content = breaking_news[0].news_content
     result = {"wrapper": wrapper, "boxes": boxes, "welcome": welcome,
-              "breaking_news": json.dumps(breaking_list)}
+              "breaking_news_title": breaking_news_title, "breaking_news_content": breaking_news_content}
     common_value = get_common_value()
     for key, value in common_value.items():
         result[key] = value
@@ -109,7 +111,6 @@ def portfolio(request):
     common_value = get_common_value()
     for key, value in common_value.items():
         result[key] = value
-
     result["winwin_descriotion"] = result['base_info'][0].winwin_description
     result["winwin_image"] = result["base_info"][0].winwin_image
     return render(request, 'portfolio.html', result)

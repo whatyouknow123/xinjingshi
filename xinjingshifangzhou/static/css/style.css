@@ -2157,7 +2157,7 @@ ul.tabs-nav .tab-nav.active {
 
 
 /* pop */
-#pop{background:#fff;width:260px;border:1px solid #e0e0e0;font-size:12px;position:fixed;left:10px;bottom:10px;display:none;z-index: 999}
+#pop{background:#fff;width:260px;border:1px solid #e0e0e0;font-size:12px;position:fixed;left:10px;bottom:10px;z-index: 999}
 #popHead{line-height:32px;background:#f6f0f3;border-bottom:1px solid #e0e0e0;position:relative;font-size:12px;padding:0 0 0 10px;}
 #popHead h2{font-size:14px;color:#666;line-height:32px;height:32px;}
 #popHead #popClose{position:absolute;right:10px;top:1px;}
