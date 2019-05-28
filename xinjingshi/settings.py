@@ -23,13 +23,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'f__hjl1%e%v7ty43&^r-29y)2-@fsxtc8gvnoyc3%@#0vf011s'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['39.96.210.208',]
+ALLOWED_HOSTS = ['39.96.210.208',"www.xinjingshifangzhou.com", "*.xinjingshifangzhou.com", "*xinjingshifangzhou.com", "xinjingshifangzhou.com", "www.xinjingshifangzhou.com"]
 
 # media root
 MEDIA_ROOT = os.path.join(BASE_DIR, "media").replace("\\", "/")
 MEDIA_URL = '/media/'
+STATIC_ROOT='/root/xinjingshi/xinjingshifangzhou/static'
 
 # Application definition
 
