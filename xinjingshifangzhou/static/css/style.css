@@ -756,7 +756,7 @@ ul.tabs-nav .tab-nav.active {
 .home-page-welcome {
     position: relative;
     padding: 96px 0;
-    background: url("/static/images/welcome-bg.jpg") no-repeat center;
+    background: url("/static/images/index_bg.jpg") no-repeat center;
     background-size: cover;
     z-index: 99;
 }
@@ -989,7 +989,7 @@ ul.tabs-nav .tab-nav.active {
 .our-causes {
     position: relative;
     padding: 96px 0;
-    background: url("/static/images/cause-bg.jpg") no-repeat center;
+    background: url("/static/images/title-bg.jpg") no-repeat center;
     background-size: cover;
     z-index: 99;
 }
@@ -1159,7 +1159,7 @@ ul.tabs-nav .tab-nav.active {
 }
 
 .about-page .page-header {
-    background: url(/static/images/about-bg.jpg) no-repeat center;
+    background: url(/static/images/title-bg.jpg) no-repeat center;
 }
 
 .about-page .welcome-wrap {
@@ -1289,7 +1289,7 @@ ul.tabs-nav .tab-nav.active {
 # Causes
 --------------------------------------------------------------*/
 .causes-page .page-header {
-    background: url(/static/images/causes-bg.jpg) no-repeat center;
+    background: url(/static/images/title-bg.jpg) no-repeat center;
 }
 
 .causes-page .featured-cause {
@@ -1368,7 +1368,7 @@ ul.tabs-nav .tab-nav.active {
 # Single Cause
 --------------------------------------------------------------*/
 .single-cause .page-header {
-    background: url(/static/images/single-cause-bg.jpg) no-repeat center;
+    background: url(/static/images/title-bg.jpg) no-repeat center;
 }
 
 .single-cause .highlighted-cause {
@@ -1525,7 +1525,7 @@ ul.tabs-nav .tab-nav.active {
 # Portfolio
 --------------------------------------------------------------*/
 .portfolio .page-header {
-    background: url(/static/images/portfolio-bg.jpg) no-repeat center;
+    background: url(/static/images/title-bg.jpg) no-repeat center;
 }
 
 .portfolio-wrap {
@@ -1578,7 +1578,7 @@ ul.tabs-nav .tab-nav.active {
 # News
 --------------------------------------------------------------*/
 .news-page .page-header {
-    background: url(/static/images/news-bg.jpg) no-repeat center;
+    background: url(/static/images/title-bg.jpg) no-repeat center;
 }
 
 .news-wrap {
@@ -1879,7 +1879,7 @@ ul.tabs-nav .tab-nav.active {
 # Contact Page
 --------------------------------------------------------------*/
 .contact-page .page-header {
-    background: url(/static/images/contact-bg.jpg) no-repeat center;
+    background: url(/static/images/title-bg.jpg) no-repeat center;
 }
 
 .contact-page-wrap {
@@ -1990,7 +1990,7 @@ ul.tabs-nav .tab-nav.active {
 # Contact Page
 --------------------------------------------------------------*/
 .elements-page .page-header {
-    background: url(/static/images/elements-bg.jpg) no-repeat center;
+    background: url(/static/images/title-bg.jpg) no-repeat center;
 }
 
 /*--------------------------------------------------------------
@@ -2001,7 +2001,7 @@ ul.tabs-nav .tab-nav.active {
     padding: 96px 0 90px;
     font-weight: 500;
     color: #929191;
-    background: url("/static/images/foot-bg.jpg") no-repeat center;
+    background: url("/static/images/foot_bg.jpg") no-repeat center;
     background-size: cover;
     z-index: 99;
 }

@@ -121,24 +121,25 @@
                         {% csrf_token %}
 
                         <div class="payment-type d-flex flex-wrap align-items-center">
-                            <h4 class="w-100 mt-5">您的学历</h4>
+                            <h4 class="w-100 mt-5">应聘岗位</h4>
 
                             <label class="d-flex align-items-center mt-4">
-                                <input type="radio" name="school" value="high" />
+                                <input type="radio" name="type" value="advisor" checked="checked"/>
                                 <span class="payment-type-radio"></span>
                                 <span class="centered-dot"></span>
 
-                                高等职业院校高职大专及以上学历
+                                会籍顾问
                             </label>
 
                             <label class="d-flex align-items-center mt-4">
-                                <input type="radio" name="school" value="middle" checked="checked" />
+                                <input type="radio" name="type" value="teacher" />
                                 <span class="payment-type-radio"></span>
                                 <span class="centered-dot"></span>
 
-                                中等职业学校
+                                健身私教
                             </label>
 
+                            <!--
                             <label class="d-flex align-items-center mt-4">
                                 <input type="radio" name="school" value="gym"/>
                                 <span class="payment-type-radio"></span>
@@ -146,17 +147,18 @@
 
                                 体育类大专、中专生
                             </label>
+                            -->
                         </div>
 
                         <div class="billing-information  d-flex flex-wrap justify-content-between align-items-center">
                             <h4 class="w-100 mt-5 mb-3">基本信息</h4>
 
                             <input type="text" placeholder="姓名" name="name" id="form_name">
-                            <input type="email" placeholder="邮箱" name="email" id="form_email">
+                            <!--<input type="email" placeholder="邮箱" name="email" id="form_email">-->
                             <input type="text" placeholder="电话" name="phone" id="form_phone">
-                            <input type="text" placeholder="住址" name="address" id="form_address">
+                            <!--<input type="text" placeholder="住址" name="address" id="form_address">-->
+                            <input type="text" placeholder="性别" name="gender" id="form_gender">
                             <input type="number" placeholder="年龄" name="age" id="form_age">
-                            <input type="number" placeholder="身高" name="height" id="form_height">
                         </div>
 
 

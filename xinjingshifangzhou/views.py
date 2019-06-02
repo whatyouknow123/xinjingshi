@@ -138,12 +138,10 @@ def single_causes(request):
             else:
 
                 tmp_result = {"name": form.cleaned_data.get('name'),
-                      "school": form.cleaned_data.get('school'),
-                      "email": form.cleaned_data.get('email'),
+                      "type": form.cleaned_data.get('type'),
                       "phone": form.cleaned_data.get('phone'),
-                      "address": form.cleaned_data.get('address'),
                       "age": form.cleaned_data.get('age'),
-                      "height": form.cleaned_data.get('height')}
+                      "gender": form.cleaned_data.get('gender')}
                 UpdateApplication(tmp_result)
 
 
