@@ -36,7 +36,7 @@
                         <a class="d-block" href="{% url 'index' %}" rel="home"><img class="d-block" src="/media/{{ logo }}" alt="logo"></a>
                     </div><!-- .site-branding -->
 
-                    <nav class="site-navigation d-flex justify-content-end align-items-center">
+                    <nav class="site-navigation d-flex justify-content-end align-items-center" id="menu-target">
                         <ul class="d-flex flex-column flex-lg-row justify-content-lg-end align-content-center">
                             <li><a href="{% url 'index' %}">首页</a></li>
                             <li><a href="{% url 'about' %}">新京师方舟教育</a></li>
@@ -48,7 +48,7 @@
                         </ul>
                     </nav><!-- .site-navigation -->
 
-                    <div class="hamburger-menu d-lg-none">
+                    <div class="hamburger-menu d-lg-none" id="menu-span" onclick="show_menu();">
                         <span></span>
                         <span></span>
                         <span></span>
